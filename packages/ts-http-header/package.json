@@ -1,0 +1,26 @@
+{
+  "name": "typed-http-headers",
+  "version": "1.0.7",
+  "description": "typed http headers",
+  "homepage": "https://github.com/bluelovers/ws-ts-type#readme",
+  "bugs": {
+    "url": "https://github.com/bluelovers/ws-ts-type/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/bluelovers/ws-ts-type.git"
+  },
+  "license": "ISC",
+  "author": "",
+  "main": "index.js",
+  "scripts": {
+    "coverage": "npx nyc npm run test",
+    "lint": "npx eslint **/*.ts",
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "prepublishOnly": "npm run ncu && npm run sort-package-json",
+    "postpublish_": "git commit -m \"publish new version\" .",
+    "ncu": "npx yarn-tool ncu -u",
+    "sort-package-json": "npx yarn-tool sort"
+  },
+  "gitHead": "3e316335e55b83ce4a7bb55bee75036e489ab6e1"
+}

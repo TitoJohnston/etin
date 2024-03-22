@@ -1,0 +1,59 @@
+{
+  "name": "ts-type",
+  "version": "1.2.25",
+  "description": "add some typescript type and re-export some build-in typescript type",
+  "keywords": [
+    ".d.ts",
+    "@types",
+    "declaration",
+    "dev",
+    "develop",
+    "development",
+    "environment",
+    "ide",
+    "interface",
+    "node",
+    "playground",
+    "runtime",
+    "ts",
+    "type",
+    "type-level",
+    "typelevel",
+    "types",
+    "typescript",
+    "typing",
+    "typings",
+    "type-helprt"
+  ],
+  "homepage": "https://github.com/bluelovers/ws-ts-type/tree/master/packages/ts-type#readme",
+  "bugs": {
+    "url": "https://github.com/bluelovers/ws-ts-type/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/bluelovers/ws-ts-type.git"
+  },
+  "license": "ISC",
+  "author": "",
+  "main": "index.js",
+  "directories": {
+    "lib": "lib",
+    "test": "test"
+  },
+  "scripts": {
+    "build": "yarn run build-lib-toc",
+    "build-lib-toc": "npx ts-node ./test/script/toc && yarn run build:toc",
+    "build:toc": "tsc -p ./ --isolatedModules --noStrictGenericChecks --skipLibCheck & echo build:toc",
+    "prepublishOnly": "yarn run ncu && yarn run sort-package-json & yarn run build",
+    "ncu": "npx yarn-tool ncu -u",
+    "sort-package-json": "npx yarn-tool sort"
+  },
+  "dependencies": {
+    "ts-toolbelt": "^6.9.9",
+    "typedarray-dts": "^1.0.0"
+  },
+  "peerDependencies": {
+    "@types/bluebird": "*"
+  },
+  "gitHead": "8733c903bb32e26825606684e3f2e29726775f01"
+}

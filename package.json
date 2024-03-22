@@ -1,0 +1,40 @@
+{
+  "name": "etin",
+  "version": "1.0.0",
+  "bugs": {
+    "url": "https://github.com/TitoJohnston/etin.git/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/TitoJohnston/etin.git"
+  },
+  "license": "ISC",
+  "author": "EttieJerde",
+  "main": "index.js",
+  "workspaces": [
+    "packages/*"
+  ],
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "lerna": "lerna publish --yes --bump patch",
+    "ncu": "yarn run ncu:root && yarn run ncu:ws",
+    "ncu:root": "npx yarn-tool ncu -u",
+    "ncu:ws": "npx yarn-tool ws exec yarn-tool ncu -- -u",
+    "sort-package-json": "yarn run sort-package-json:root && yarn run sort-package-json:ws",
+    "sort-package-json:root": "npx yarn-tool sort",
+    "sort-package-json:ws": "npx yarn-tool ws exec yarn-tool sort"
+  },
+  "resolutions": {},
+  "dependencies": {
+    "fast-glob": "^3.2.4",
+    "fs-extra": "^9.0.1",
+    "upath2": "^3.1.5"
+  },
+  "devDependencies": {
+    "@bluelovers/fast-glob": "^3.0.4",
+    "@bluelovers/tsconfig": "^1.0.19",
+    "@types/bluebird": "*",
+    "@types/fs-extra": "*",
+    "@types/node": "*"
+  }
+}
